@@ -8,6 +8,11 @@ const PostsContainer = props => {
   return (
     <div className="posts-container-wrapper">
       {/* map through data here */}
+      {props.postData.map(ele => (
+        <div>
+          <Post key={ele.username} post={ele} />
+        </div>
+      ))}
     </div>
   );
 };
